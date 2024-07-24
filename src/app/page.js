@@ -10,7 +10,7 @@ export default function Home() {
    message : 'Your custom message goes here...',
   }
   return (
-    <main className="flex min-h-screen bg-slate-600 p-12 ">
+    <main className="flex min-h-screen bg-slate-600 p-12 scroll-smooth ">
 
       <Testimonial {...obj}/>
     </main>

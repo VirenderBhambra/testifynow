@@ -5,7 +5,7 @@ import { TestimonialPreview } from "./TestimonialPreview";
 import { TestimonialForm } from "./TestimonialForm";
 import GlobalApi from "@/service/GlobalApi";
 
-export const Testimonial = ({ onClose ,fetchTestimonials}) => {
+export const TestimonialUpdate = ({ id}) => {
   const [loading, setLoading] = useState(false);
   const [testimonialData, setTestimonialData] = useState({
     spaceName: null,
@@ -68,13 +68,15 @@ export const Testimonial = ({ onClose ,fetchTestimonials}) => {
       </button>
 
       <div className="ml-4 flex gap-4">
-        <TestimonialPreview testimonialData={testimonialData} />
+        {/* <TestimonialPreview testimonialData={testimonialData} />
         <TestimonialForm
           testimonialData={testimonialData}
           handleChange={handleChange}
           onSubmit={onSubmit}
         />
-      </div>
+      </div> */}
+      {id}
+      /</div>
     </div>
   );
 };
