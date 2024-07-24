@@ -27,6 +27,7 @@ const TestimonialSchema = new Schema({
 });
 
 // Check if the model already exists before creating it
-const TestimonialModel = mongoose.models.Testimonial || mongoose.model('TestimonialModel', TestimonialSchema);
+const TestimonialModel = mongoose.models.Testimonial || mongoose.model('Testimonial', TestimonialSchema);
 
 export default TestimonialModel;
+ 

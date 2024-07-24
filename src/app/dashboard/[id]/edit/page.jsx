@@ -4,11 +4,13 @@ import { useEffect,useState } from 'react';
 
 const DashboardSlug = ({ params }) => {
     const {id} = params;
-    const [space,mySpace] = useState([]);
+    console.log(id);
+    const [space,setMySpace] = useState({});
     const fetchSpace = async () => {
       try {
         const data = await GlobalApi.getSpaceById(id);
-        setMySpaces(data.data);
+        console.log(data.data)
+        setMySpace(data.data);
       } catch (error) {
         console.error("Error fetching Spaces:", error);
       }
@@ -18,9 +20,9 @@ const DashboardSlug = ({ params }) => {
     }, []);
   return (
     <div>
-      {space.header}
-      {space.spaceName}
-      {space._id}
+      {space?.header}
+      {space?.spaceName}
+      {space?._id}
     </div>
   );
 };

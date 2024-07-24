@@ -12,8 +12,8 @@ const createSpace = async (data) => {
   const res = await axiosClient.post("/api/test", data);
   return res.data;
 };
-const getSpaceById = async ()=>{
-  const res = await axiosClient.get(`/api/test/id?id=${id}`);
+const getSpaceById = async (id)=>{
+  const res = await axiosClient.get(`/api/id?id=${id}`);
   return res.data;
 }
 const getSpace = async ()=>{
@@ -24,7 +24,11 @@ const deleteSpace = async (id) => {
   const res = await axiosClient.delete(`/api/test?id=${id}`); // Pass ID as a query parameter
   return res.data;
 }
+const submitTestimonial = async (data)=>{
+  const res = await axiosClient.post("/api/user",data);
+  return res.data;
+}
 const GlobalApi = {
-    createSpace,getSpace,deleteSpace,getSpaceById,
+    createSpace,getSpace,deleteSpace,getSpaceById,submitTestimonial
 }
 export default GlobalApi;
